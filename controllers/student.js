@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const Student = mongoose.model('Student')
 const saveStudent = async (ctx, next) => {
-    let opts = ctx.req.body
+    let opts = ctx.request.body
     let student = new Student(opts)
     let saveStudent = await student.save()
     console.log(saveStudent)

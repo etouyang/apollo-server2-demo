@@ -2,7 +2,8 @@ import mongoose from 'mongoose'
 
 const Info = mongoose.model('Info')
 const saveInfo = async (ctx, next) => {
-    let opts = ctx.req.body
+    let opts = ctx.request.body
+    console.log(opts)
     let info = new Info(opts)
     let saveInfo = await info.save()
     console.log(saveInfo)

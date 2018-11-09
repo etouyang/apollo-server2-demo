@@ -28,7 +28,7 @@ const path = '/api'
 const router = new Router()
 
 //在applyMiddleware前调用jwt验证中间件和其它中间件
-router.use('', requestRouter.routes())
+router.use('', requestRouter.routes(), requestRouter.allowedMethods())
 const middlewares = compose([
     auth,
     errHandle,
