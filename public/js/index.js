@@ -45,7 +45,7 @@ window.onload = function () {
   
     $('#btn3').click(function() {
       $.ajax({
-        url: '/graphql',
+        url: '/api',
         data: {
           query: `query{
             student{
